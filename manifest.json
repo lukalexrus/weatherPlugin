@@ -1,0 +1,22 @@
+{
+    "name": "Weather extension",
+    "description": "Provide information about weather",
+    "version": "1.0",
+    "manifest_version": 3,
+    "host_permissions": [
+        "*://api.openweathermap.org/"
+    ],
+    "permissions": [
+        "tabs",
+        "notifications",
+        "fontSettings",
+        "storage"
+    ],
+    "action": {
+        "default_popup": "hello.html",
+        "default_icon": "hello_extensions.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    }
+}

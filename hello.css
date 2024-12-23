@@ -1,0 +1,167 @@
+body {
+    width: 520px;
+    padding: 10px;
+    background-color: #0097A7;
+}
+
+.info-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.top-block {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.city-name {
+    color: #FFFFFF;
+}
+
+.temperature-block {
+    font-size: 45px;
+    line-height: 47px;
+    margin: 0 2%;
+    color: #FFFFFF;
+}
+
+.temperature-description {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.additional-block {
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.wind-block {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.humidity-block {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.pressure-block {
+    display: inline-block;
+}
+
+.delimitter-block {
+    vertical-align: baseline;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff3d;
+}
+
+.forecast-item {
+    vertical-align: baseline;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    margin-right: 8px;
+    position: relative;
+    width: 60px;
+    text-align: center;
+}
+
+.forecast-block {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 131px;
+}
+
+.forecast-block-wrapper {
+    white-space: nowrap;
+    height: 131px;
+}
+
+.date-block-forecast {
+    font-size: 14px;
+    opacity: .7;
+    color: #FFFFFF;
+    margin-bottom: 2px;
+}
+
+.temperature-block-forecast {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-top: 2px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #29909b;
+}
+
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.error {
+    text-align: center;
+    color: aliceblue;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 80%;
+    height: 40px;
+    background:
+        radial-gradient(circle 25px at top right, #ffd738 40%, #0000),
+        #4dbefa;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+
+.loader:before,
+.loader:after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -40px;
+    width: 36px;
+    height: 20px;
+    --c: radial-gradient(farthest-side, #fff 96%, #0000);
+    background:
+        var(--c) 100% 100% /30% 60%,
+        var(--c) 70% 0 /50% 100%,
+        var(--c) 0 100% /36% 68%,
+        var(--c) 27% 18% /26% 40%,
+        linear-gradient(#fff 0 0) bottom/67% 58%;
+    background-repeat: no-repeat;
+    animation: l10 2s linear infinite;
+}
+
+.loader:after {
+    top: 15px;
+    --l: 200%;
+}
+
+@keyframes l10 {
+    100% {
+        left: var(--l, 105%)
+    }
+}
+
+.outdated-name {
+    color: red;
+    font-size: 12px;
+}
